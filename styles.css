@@ -1,0 +1,24 @@
+        img{
+            height: 150px;
+            width: auto;
+        }
+        #left{
+            margin-right: 3px;
+        }
+        
+        #right{
+            margin-left: 3px;
+        }
+        #content-wrapper{
+            display: grid;
+            grid-template-columns: 25% 75%;
+        }
+        button{
+            margin: 50px;
+            padding: 50px;
+        }
+        #one-wrapper{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
