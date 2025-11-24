@@ -4,6 +4,7 @@
         }
         #left{
             margin-right: 3px;
+            display: none;
         }
         
         #right{

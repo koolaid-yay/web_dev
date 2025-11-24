@@ -5,10 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css"> 
+    <script>
+        images = ["https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3eba284d9bc814570814d_18.png", 
+        "https://content.presentermedia.com/files/clipart/00028000/28699/sad_worry_emoji_face_800_wht.jpg", "https://cdn.vectorstock.com/i/1000v/53/06/sad-emoticon-face-vector-21045306.jpg"
+    , "https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3eba284d9bc814570814d_18.png"]
+
+        showing ="none"
+        function show(){
+            if(showing == "none"){
+                document.getElementById("left").style.display ="block"
+                showing = "block"
+                document.getElementById("button").innerHTML = "show less"
+            }else{
+                document.getElementById("left").style.display ="none"
+                showing = "none"
+                document.getElementById("button").innerHTML = "show more"
+            }
+        }
+
+        function change(){
+            document.getElementById("two").src = images[index]
+            index += 1
+            if (index >= images.length){
+                index = 0
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>title</h1>
-    <button>hello</button>
+    <button id = "button" onclick={show()}>show more</button>
     <div id="content-wrapper"></div>
     <div id="left">
         <p>Lorem ipsum dolor sit amet. Non dolore consequatur ab exercitationem
@@ -24,7 +50,7 @@ Et similique rerum nam unde saepe non enim distinctio. Qui quis exercitationem
     </div>
     <div id="right">
         <div id="one-wrapper"></div>
-        <img id="one" alt="funny" src="https://thumbs.dreamstime.com/b/excited-emoticon-design-31824594.jpg"/>
+        <img id="one" alt="funny" onmouseover={change()} src="https://thumbs.dreamstime.com/b/excited-emoticon-design-31824594.jpg"/>
         <img id="two" alt="funnier" src="https://cdn.creativefabrica.com/2022/03/16/Silly-face-emoji-Round-emoticon-with-bi-Graphics-27307417-1-1-580x387.png"/>
         <img id="one" alt="funny" src="https://thumbs.dreamstime.com/b/excited-emoticon-design-31824594.jpg"/>
         <img id="two" alt="funnier" src="https://cdn.creativefabrica.com/2022/03/16/Silly-face-emoji-Round-emoticon-with-bi-Graphics-27307417-1-1-580x387.png"/>
