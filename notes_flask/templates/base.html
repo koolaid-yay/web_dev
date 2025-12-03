@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block content %}{% endblock %}</title>
+</head>
+<body>
+    <h1>flask site</h1>
+    <div id="nav">
+        <a href="/">home</a> <p> | </p>
+        <a href="/contact">contact</a> <p> | </p>
+        <a href="/about">about</a> <p> | </p>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>

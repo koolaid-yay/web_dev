@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-</head>
-<body>
-    <h1>first flask site</h1>
+{% extends "base.html" %}
+{% block content %}Home - flask{% endblock %}
+
+{% block body %}
+    <h1>home page</h1>
     <form method="POST">
         <label for="name">enter your username
         </label> 
         <input type="text" name="name"
         placeholder="what is your name? ">
         <input type="submit"
-        value="submit">
+        value="Submit">
     </form>
     <img src="https://www.publicdomainpictures.net/pictures/560000/nahled/tomaat-grappige-cartoon-groente.png"/>
-</body>
-</html>
+{% endblock %}
