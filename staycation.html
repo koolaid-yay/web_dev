@@ -20,17 +20,16 @@
                 border-radius: 200px;
                 border-width: 5px;
             }
+
+
             #img2{
-                margin: 50px;
+                margin: 100px;
                 padding: 10px;
                 height: 300px;
                 border-style: dotted;
                 border-color: rgb(94, 3, 3);
                 border-radius: 200px;
                 border-width: 5px;
-                display: flex;
-                justify-content: right;
-                flex-wrap: wrap-reverse;
             }
             #img3{
                 margin: 50px;
@@ -51,21 +50,47 @@
                 border-width: 5px;
 
             }
+            #paragraph{
+                margin: 50px;
+                padding: 10px;
+                height: 120px;
+                border-style: solid;
+                border-color: rgb(94, 3, 3);
+                border-radius: 50px;
+                border-width: 7px;
+
+            }
+
+
+
         </style>
-    </head>
+            <script>
+            images = ["https://www.visittheusa.com/sites/default/files/styles/16_9_1280x720/public/2016-10/Arches.jpg?itok=UKcmMCsb","https://images.squarespace-cdn.com/content/v1/5b9d6105b10598d9a7517a76/1599595605916-6E85ERJI25USX29WRSVL/IMG_8976.jpeg"]
+            index=0
+            function img2(){
+                document.getElementById("img2").src= images[index]
+                index +=1
+            }
+                if(index>= images.length){
+                index=0
+                }
+            </script>
+        </head>
     <body>
         <div id="header" style="background-color: rgb(235, 173, 41);color:rgb(65, 39, 7)">
         <h1>Come to the Arches!</h1>
+        </div>
         <img id="img1" src="https://cdn.5280.com/2024/05/Opener_Double-Arch_Whit-Richardson_20130204-DA-23-1280x720.jpg"
         alt="double arch photo" />
-        </div>
-        <p>Have you ever wanted to go on a vacation but not exactly sure where?
+        <div>
+        <p id="paragraph">Have you ever wanted to go on a vacation but not exactly sure where?
             Come on down to the arches national park in utah! The arches are A beautiful
             natural phenomenon formed by erosion, wind, water etc. They are burnt a crisp
             orange-red, and if you come in the winter, you'll be able to see the contrast
             of white on the crimson rocks. There are many different kinds of arches, but the most
             known being the delicate arch. 
         </p>
+        </div>
         <img id="img2" src="https://www.visittheusa.com/sites/default/files/styles/16_9_1280x720/public/2016-10/Arches.jpg?itok=UKcmMCsb"
         alt="starry arch photo" />
         <div>
