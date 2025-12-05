@@ -46,11 +46,37 @@
             grid-template-columns: 25% 200%;
         }
         </style>
+                <script>
+            images = ["https://sc.edu/study/colleges_schools/music/study/academic_areas/music_history/terborch_duet_banner.jpg", "https://www.musicandlanguagecenter.com/uploads/2/4/2/8/24282013/mh1-orig_orig.png"]
+            index=0
+            alert("You changed the photo!")
+            function photo(){
+                document.getElementById("hello").src= images[index]
+                index +=1
+                if(index>= images.length){
+                index=0
+            }
+        
+    }
+            showing= "change"
+            function show(){
+            if(showing="change"){
+            document.getElementById("change").style.display="click"
+            showing="click"
+            document.getElementById("click").innerHTML="Show More"
+            }else{
+            document.getElementById("change").style.display="none"
+            showing="change"
+            document.getElementById("click").innerHTML="Show Less"
+        }
+    }
+    
+        </script>
     </head>
     <body>
         <div id="content-wrapper">
         <h1 id="header">Music and how its grown throughout history</h1>
-        <img id="hello" src="https://sc.edu/study/colleges_schools/music/study/academic_areas/music_history/terborch_duet_banner.jpg"
+        <img id="hello" onmouseover={photo()} src="https://sc.edu/study/colleges_schools/music/study/academic_areas/music_history/terborch_duet_banner.jpg"
         alt="old oil painting"/></div>
         <h2>This webpage is my own research on the long history of music progression</h2>
         <h6>Let me show you the intriguing history of how music came to be</h6>
@@ -87,6 +113,9 @@
             bronze and/or copper. These inventions have helped shape modern and sleek instruments
             that we have today.  
         </p>
+        </div>
+            <button id="click" onclick={show()}>Show less</button>
+        <div id="change">
         <a href="https://www.skagitsymphony.com/time-periods-in-music-history" target="_blank">
             music timeline
         </a>
